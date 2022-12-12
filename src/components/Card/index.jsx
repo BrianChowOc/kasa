@@ -1,10 +1,10 @@
 import styled from "styled-components";
+import PropTypes from "prop-types";
 
 const CardContainer = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
-  margin: 30px;
   width: 340px;
   height: 340px;
   border-radius: 10px;
@@ -13,15 +13,16 @@ const CardContainer = styled.div`
   padding-bottom: 20px;
   padding-left: 20px;
   color: white;
-  background: linear-gradient(
-    180deg,
-    rgba(255, 96, 96, 1) 0%,
-    rgba(0, 0, 0, 0.5) 100%
-  );
+  background-image: url(${(props) => props.cover});
 `;
 
-function Card() {
-  return <CardContainer>Titre de la location</CardContainer>;
+function Card({ title, cover }) {
+  return <CardContainer cover={cover}>{title}</CardContainer>;
 }
+
+Card.propTypes = {
+  title: PropTypes.string,
+  cover: PropTypes.string,
+};
 
 export default Card;

@@ -1,34 +1,43 @@
 import styled from "styled-components";
 import Banner from "../../components/Banner";
 import Card from "../../components/Card";
+import imageHeaderHome from "../../images/imageHeaderHome.png";
+import logementList from "../../datas/logementList.js";
+
+const HomeContainer = styled.div`
+  margin: 0px 100px 0px 100px;
+`;
 
 const CardContainer = styled.div`
   display: flex;
-  justify-content: center;
+  justify-content: space-around;
   flex-wrap: wrap;
   background-color: #f6f6f6;
   border-radius: 25px;
+  padding-top: 31px;
+  padding-bottom: 18px;
   margin-top: 43px;
-  padding-left: 20px;
-  padding-right: 20px;
-  padding-top: 26px;
-  padding-bottom: 13px;
 `;
 
+const CardStyle = styled.div`
+  margin-top: 25px;
+  margin-bottom: 25px;
+`;
 function Home() {
   return (
-    <>
-      <Banner />
+    <HomeContainer>
+      <Banner
+        imgBanner={imageHeaderHome}
+        text="Chez vous, partout et ailleurs"
+      />
       <CardContainer>
-        <Card />
-        <Card />
-        <Card />
-        <Card />
-        <Card />
-        <Card />
-        <Card />
+        {logementList.map((logement) => (
+          <CardStyle key={logement.id}>
+            <Card title={logement.title} cover={logement.cover} />
+          </CardStyle>
+        ))}
       </CardContainer>
-    </>
+    </HomeContainer>
   );
 }
 
