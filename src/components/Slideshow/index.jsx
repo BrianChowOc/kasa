@@ -17,14 +17,7 @@ const CountStyle = styled.div`
   left: 50%;
 `;
 
-const pictures = [
-  "https://s3-eu-west-1.amazonaws.com/course.oc-static.com/projects/front-end-kasa-project/accommodation-6-1.jpg",
-  "https://s3-eu-west-1.amazonaws.com/course.oc-static.com/projects/front-end-kasa-project/accommodation-6-2.jpg",
-  "https://s3-eu-west-1.amazonaws.com/course.oc-static.com/projects/front-end-kasa-project/accommodation-6-3.jpg",
-  "https://s3-eu-west-1.amazonaws.com/course.oc-static.com/projects/front-end-kasa-project/accommodation-6-4.jpg",
-];
-
-function Slideshow() {
+function Slideshow({ pictures }) {
   const [currentIndex, setCurrentIndex] = useState(0);
 
   const slideStyle = {

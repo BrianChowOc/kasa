@@ -3,6 +3,7 @@ import Banner from "../../components/Banner";
 import Card from "../../components/Card";
 import imageHeaderHome from "../../images/imageHeaderHome.png";
 import logementList from "../../datas/logementList.js";
+import { Link } from "react-router-dom";
 
 const HomeContainer = styled.div`
   margin: 0px 100px 0px 100px;
@@ -19,9 +20,10 @@ const CardContainer = styled.div`
   margin-top: 43px;
 `;
 
-const CardStyle = styled.div`
+const CardStyle = styled(Link)`
   margin-top: 25px;
   margin-bottom: 25px;
+  text-decoration: none;
 `;
 function Home() {
   return (
@@ -32,7 +34,7 @@ function Home() {
       />
       <CardContainer>
         {logementList.map((logement) => (
-          <CardStyle key={logement.id}>
+          <CardStyle key={logement.id} to={`/housing/${logement.id}`}>
             <Card title={logement.title} cover={logement.cover} />
           </CardStyle>
         ))}
