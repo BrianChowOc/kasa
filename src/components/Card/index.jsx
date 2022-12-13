@@ -14,6 +14,8 @@ const CardContainer = styled.div`
   padding-left: 20px;
   color: white;
   background-image: url(${(props) => props.cover});
+  background-position: center;
+  background-size: cover;
 `;
 
 function Card({ title, cover }) {

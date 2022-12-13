@@ -1,5 +1,11 @@
+import Slideshow from "../../components/Slideshow";
+
 function Housing() {
-  return <h1>Logement</h1>;
+  return (
+    <div>
+      <Slideshow />
+    </div>
+  );
 }
 
 export default Housing;

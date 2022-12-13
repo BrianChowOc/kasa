@@ -3,7 +3,6 @@ import { ReactComponent as KLogo } from "../../images/logo/KLogo.svg";
 import { ReactComponent as ALogo } from "../../images/logo/ALogo.svg";
 import { ReactComponent as SLogo } from "../../images/logo/SLogo.svg";
 import { ReactComponent as HouseLogo } from "../../images/logo/HouseLogo.svg";
-import { ReactComponent as DoorLogo } from "../../images/logo/DoorLogo.svg";
 
 const FooterContainer = styled.footer`
   display: flex;
@@ -34,10 +33,7 @@ function Footer() {
     <FooterContainer>
       <LogoContainer>
         <KLogo fill="white" />
-        <div>
-          <HouseLogo fill="white" />
-          <DoorLogo fill="white" />
-        </div>
+        <HouseLogo fill="white" />
         <SLogo fill="white" />
         <ALogo fill="white" />
       </LogoContainer>
