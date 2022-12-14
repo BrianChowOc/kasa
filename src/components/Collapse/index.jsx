@@ -7,12 +7,11 @@ import { ReactComponent as ArrowBottom } from "../../images/ArrowTop.svg";
 const CollapseContainer = styled.div`
   display: flex;
   flex-direction: column;
+  width: 100%;
 `;
 
 const HeaderCollapse = styled.div`
   height: 47px;
-  width: 100%;
-
   background-color: #ff6060;
   border-radius: 10px;
   color: white;
@@ -72,7 +71,7 @@ function Collapse({ text, description }) {
 
 Collapse.propTypes = {
   text: PropTypes.string,
-  img: PropTypes.string,
+  description: PropTypes.string,
 };
 
 export default Collapse;
