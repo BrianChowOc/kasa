@@ -57,9 +57,6 @@ function Housing() {
   const firstName = name[0];
   const lastName = name[1];
 
-  const equipments = logement[0].equipments.toString().replace(/,/g, "\n");
-
-  console.log(equipments);
   return (
     <HousingContainer>
       <Slideshow pictures={logement[0].pictures} />
@@ -100,7 +97,7 @@ function Housing() {
           <Collapse text="Description" description={logement[0].description} />
         </div>
         <div style={{ width: "100%" }}>
-          <Collapse text="Équipements" description={equipments} />
+          <Collapse text="Équipements" description={logement[0].equipments} />
         </div>
       </DescriptionContainer>
     </HousingContainer>

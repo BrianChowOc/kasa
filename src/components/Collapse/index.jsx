@@ -44,8 +44,27 @@ const BodyCollapse = styled.div`
   padding-bottom: 19px;
 `;
 
+const BodyCollapseObject = styled.div`
+  display: flex;
+  color: #ff6060;
+  background-color: #f6f6f6;
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+  padding-left: 18px;
+  padding-right: 27px;
+  padding-top: 27px;
+  padding-bottom: 19px;
+`;
+
+const UlStyle = styled.ul`
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+`;
+
 function Collapse({ text, description }) {
   const [isHidden, setIsHidden] = useState(true);
+  console.log(typeof description);
   return (
     <CollapseContainer>
       <HeaderCollapse
@@ -64,14 +83,25 @@ function Collapse({ text, description }) {
           </ArrowCollapse>
         )}
       </HeaderCollapse>
-      {!isHidden && <BodyCollapse>{description}</BodyCollapse>}
+      {!isHidden && typeof description === "string" && (
+        <BodyCollapse>{description}</BodyCollapse>
+      )}
+      {!isHidden && typeof description === "object" && (
+        <BodyCollapseObject>
+          <UlStyle>
+            {description.map((word) => {
+              return <li>{word}</li>;
+            })}
+          </UlStyle>
+        </BodyCollapseObject>
+      )}
     </CollapseContainer>
   );
 }
 
 Collapse.propTypes = {
   text: PropTypes.string,
-  description: PropTypes.string,
+  description: PropTypes.string || PropTypes.array,
 };
 
 export default Collapse;
