@@ -6,6 +6,10 @@ const ImgStyle = styled.img`
   height: 64px;
   border-radius: 50%;
   background-color: #c4c4c4;
+  @media screen and (max-width: 915px) {
+    width: 32px;
+    height: 32px;
+  }
 `;
 
 function HostImg({ img }) {

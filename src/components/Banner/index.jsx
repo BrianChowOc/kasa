@@ -7,6 +7,9 @@ const BannerContainer = styled.div`
   justify-content: center;
   align-items: center;
   position: relative;
+  @media screen and (max-width: 950px) {
+    height: 111px;
+  }
 `;
 
 const BackgroundContainer = styled.img`
@@ -28,6 +31,15 @@ const TextBanner = styled.div`
   z-index: 50;
   font-weight: 500;
   font-size: 48px;
+  @media screen and (max-width: 950px) {
+    font-size: 24px;
+  }
+  @media screen and (max-width: 410px) {
+    font-size: 20px;
+  }
+  @media screen and (max-width: 280px) {
+    font-size: 15px;
+  }
 `;
 
 function Banner({ text, imgBanner }) {

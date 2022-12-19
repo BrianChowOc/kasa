@@ -13,6 +13,7 @@ const FooterContainer = styled.footer`
   height: 209px;
   width: 100%;
   margin-top: 50px;
+  align-self: flex-end;
 `;
 
 const LogoContainer = styled.div`
@@ -26,6 +27,9 @@ const TextContainer = styled.div`
   margin-top: 32px;
   font-size: 24px;
   font-weight: 500;
+  @media screen and (max-width: 915px) {
+    font-size: 12px;
+  }
 `;
 
 function Footer() {

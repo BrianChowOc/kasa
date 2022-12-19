@@ -8,6 +8,19 @@ const SlideshowContainer = styled.div`
   height: 415px;
   position: relative;
   border-radius: 25px;
+  svg {
+    position: "absolute";
+    top: "40%";
+    right: "23px";
+    cursor: "pointer";
+  }
+  @media screen and (max-width: 915px) {
+    height: 255px;
+    svg {
+      height: 20px;
+      width: 11.6px;
+    }
+  }
 `;
 
 const CountStyle = styled.div`
@@ -15,6 +28,9 @@ const CountStyle = styled.div`
   color: white;
   bottom: 24px;
   left: 50%;
+  @media screen and (max-width: 915px) {
+    display: none;
+  }
 `;
 
 function Slideshow({ pictures }) {
@@ -31,13 +47,13 @@ function Slideshow({ pictures }) {
 
   const leftArrowStyle = {
     position: "absolute",
-    top: "40%",
+    top: "42.5%",
     left: "23px",
     cursor: "pointer",
   };
   const rightArrowStyle = {
     position: "absolute",
-    top: "40%",
+    top: "42.5%",
     right: "23px",
     cursor: "pointer",
   };
@@ -56,11 +72,17 @@ function Slideshow({ pictures }) {
   return (
     <SlideshowContainer>
       <div style={slideStyle}>
-        <LeftArrow style={leftArrowStyle} onClick={goToPrevious} />
-        <RightArrow style={rightArrowStyle} onClick={goToNext} />
-        <CountStyle>
-          {currentIndex + 1}/{pictures.length}
-        </CountStyle>
+        {pictures.length > 1 && (
+          <LeftArrow style={leftArrowStyle} onClick={goToPrevious} />
+        )}
+        {pictures.length > 1 && (
+          <RightArrow style={rightArrowStyle} onClick={goToNext} />
+        )}
+        {pictures.length > 1 && (
+          <CountStyle>
+            {currentIndex + 1}/{pictures.length}
+          </CountStyle>
+        )}
       </div>
     </SlideshowContainer>
   );

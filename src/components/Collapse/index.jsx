@@ -11,7 +11,7 @@ const CollapseContainer = styled.div`
 `;
 
 const HeaderCollapse = styled.div`
-  height: 47px;
+  height: 52px;
   background-color: #ff6060;
   border-radius: 10px;
   color: white;
@@ -20,6 +20,10 @@ const HeaderCollapse = styled.div`
   font-weight: 500;
   font-size: 24px;
   justify-content: space-between;
+  @media screen and (max-width: 915px) {
+    height: 30px;
+    font-size: 13px;
+  }
 `;
 
 const TextCollapse = styled.span`
@@ -28,6 +32,12 @@ const TextCollapse = styled.span`
 
 const ArrowCollapse = styled.span`
   padding-right: 16px;
+  @media screen and (max-width: 915px) {
+    svg {
+      width: 10px;
+      height: 15px;
+    }
+  }
 `;
 
 const BodyCollapse = styled.div`
@@ -42,6 +52,13 @@ const BodyCollapse = styled.div`
   padding-right: 27px;
   padding-top: 27px;
   padding-bottom: 19px;
+  @media screen and (max-width: 915px) {
+    font-size: 12px;
+    svg {
+      width: 10px;
+      height: 15px;
+    }
+  }
 `;
 
 const BodyCollapseObject = styled.div`
@@ -60,6 +77,9 @@ const UlStyle = styled.ul`
   list-style-type: none;
   padding: 0;
   margin: 0;
+  @media screen and (max-width: 915px) {
+    font-size: 12px;
+  }
 `;
 
 function Collapse({ text, description }) {

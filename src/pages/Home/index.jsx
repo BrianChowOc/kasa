@@ -7,17 +7,27 @@ import { Link } from "react-router-dom";
 
 const HomeContainer = styled.div`
   margin: 0px 100px 0px 100px;
+  @media screen and (max-width: 915px) {
+    margin-right: 21px;
+    margin-left: 21px;
+  }
+  @media screen and (max-width: 280px) {
+    margin-right: 15px;
+    margin-left: 15px;
+  }
 `;
 
 const CardContainer = styled.div`
   display: flex;
   justify-content: space-around;
   flex-wrap: wrap;
-  background-color: #f6f6f6;
-  border-radius: 25px;
-  padding-top: 31px;
-  padding-bottom: 18px;
-  margin-top: 43px;
+
+  @media screen and (min-width: 915px) {
+    background-color: #f6f6f6;
+    border-radius: 25px;
+    padding-bottom: 18px;
+    margin-top: 43px;
+  }
 `;
 
 const CardStyle = styled(Link)`

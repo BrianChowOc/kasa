@@ -5,12 +5,20 @@ import imageHeaderAbout from "../../images/imageHeaderAbout.png";
 
 const AboutContainer = styled.div`
   margin: 0px 100px 0px 100px;
+  @media screen and (max-width: 915px) {
+    margin-right: 21px;
+    margin-left: 21px;
+  }
 `;
 
 const CollapseContainer = styled.div`
   margin-top: 31px;
   margin-left: 100px;
   margin-right: 100px;
+  @media screen and (max-width: 915px) {
+    margin-right: 0px;
+    margin-left: 0px;
+  }
 `;
 
 const CollapseStyle = styled.div`

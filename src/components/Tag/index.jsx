@@ -11,6 +11,17 @@ const TagContainer = styled.div`
   color: white;
   padding-left: 20px;
   padding-right: 20px;
+  @media screen and (max-width: 915px) {
+    height: 18px;
+    font-size: 10px;
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+  @media screen and (max-width: 280px) {
+    font-size: 7px;
+    padding-left: 5px;
+    padding-right: 5px;
+  }
 `;
 
 function Tag({ text }) {

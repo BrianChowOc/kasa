@@ -11,6 +11,9 @@ const HeaderContainer = styled.div`
   justify-content: space-between;
   align-items: center;
   margin: 40px 100px 69px 100px;
+  @media screen and (max-width: 915px) {
+    margin: 20px;
+  }
 `;
 
 const LogoHeader = styled.div`
@@ -18,12 +21,27 @@ const LogoHeader = styled.div`
   justify-content: space-between;
   align-items: flex-end;
   width: 210px;
+  @media screen and (max-width: 915px) {
+    width: 150px;
+  }
+  @media screen and (max-width: 280px) {
+    width: 100px;
+  }
 `;
 
 const NavContainer = styled.nav`
   display: flex;
   justify-content: space-between;
   width: 250px;
+  @media screen and (max-width: 915px) {
+    width: 150px;
+  }
+  @media screen and (max-width: 410px) {
+    width: 120px;
+  }
+  @media screen and (max-width: 280px) {
+    width: 110px;
+  }
 `;
 
 const StyledLink = styled(Link)`
@@ -31,6 +49,9 @@ const StyledLink = styled(Link)`
   text-decoration: ${(props) => (props.line ? "undeline" : "none")};
   font-size: 24px;
   font-weight: 500;
+  @media screen and (max-width: 915px) {
+    font-size: 12px;
+  }
 `;
 
 function Header() {

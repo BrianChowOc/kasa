@@ -16,6 +16,23 @@ const CardContainer = styled.div`
   background-image: url(${(props) => props.cover});
   background-position: center;
   background-size: cover;
+  margin: 25px;
+
+  @media screen and (max-width: 915px) {
+    width: 335px;
+    height: 255px;
+  }
+  @media screen and (max-width: 410px) {
+    width: 300px;
+    height: 200px;
+    margin: 0px;
+  }
+  @media screen and (max-width: 280px) {
+    width: 220px;
+    height: 150px;
+    margin: 0px;
+    font-size: 15px;
+  }
 `;
 
 function Card({ title, cover }) {

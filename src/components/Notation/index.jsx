@@ -6,6 +6,15 @@ const StarContainer = styled.div`
   width: 190px;
   display: flex;
   justify-content: space-between;
+  @media screen and (max-width: 915px) {
+    svg {
+      width: 15px;
+      height: 15px;
+    }
+  }
+  @media screen and (max-width: 280px) {
+    width: 100px;
+  }
 `;
 
 function Notation({ rating }) {
@@ -15,9 +24,9 @@ function Notation({ rating }) {
     <StarContainer>
       {tabRating.map((value) => {
         if (value <= ratingNumber) {
-          return <Star height={30} width={30} style={{ fill: "#ff6060" }} />;
+          return <Star style={{ fill: "#ff6060" }} />;
         } else {
-          return <Star height={30} width={30} style={{ fill: "#E3E3E3" }} />;
+          return <Star style={{ fill: "#E3E3E3" }} />;
         }
       })}
     </StarContainer>
