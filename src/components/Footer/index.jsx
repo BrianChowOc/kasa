@@ -13,7 +13,6 @@ const FooterContainer = styled.footer`
   height: 209px;
   width: 100%;
   margin-top: 50px;
-  align-self: flex-end;
 `;
 
 const LogoContainer = styled.div`
