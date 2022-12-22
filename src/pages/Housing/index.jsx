@@ -118,7 +118,7 @@ function Housing() {
           <div style={{ display: "flex", marginTop: "10px" }}>
             {logement[0].tags.map((tag) => {
               return (
-                <div style={{ marginRight: "10px" }}>
+                <div style={{ marginRight: "10px" }} key={tag}>
                   <Tag text={tag} />
                 </div>
               );

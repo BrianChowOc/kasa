@@ -84,7 +84,6 @@ const UlStyle = styled.ul`
 
 function Collapse({ text, description }) {
   const [isHidden, setIsHidden] = useState(true);
-  console.log(typeof description);
   return (
     <CollapseContainer>
       <HeaderCollapse
@@ -109,8 +108,8 @@ function Collapse({ text, description }) {
       {!isHidden && typeof description === "object" && (
         <BodyCollapseObject>
           <UlStyle>
-            {description.map((word) => {
-              return <li>{word}</li>;
+            {description.map((word, index) => {
+              return <li key={`${word}-${index}`}>{word}</li>;
             })}
           </UlStyle>
         </BodyCollapseObject>
@@ -121,7 +120,6 @@ function Collapse({ text, description }) {
 
 Collapse.propTypes = {
   text: PropTypes.string,
-  description: PropTypes.string || PropTypes.array,
 };
 
 export default Collapse;

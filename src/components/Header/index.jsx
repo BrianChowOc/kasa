@@ -46,7 +46,7 @@ const NavContainer = styled.nav`
 
 const StyledLink = styled(Link)`
   color: #ff6060;
-  text-decoration: ${(props) => (props.line ? "undeline" : "none")};
+  text-decoration: ${(props) => (props.line === "true" ? "undeline" : "none")};
   font-size: 24px;
   font-weight: 500;
   @media screen and (max-width: 915px) {
@@ -56,8 +56,8 @@ const StyledLink = styled(Link)`
 
 function Header() {
   const location = useLocation();
-  const underlineHome = location.pathname === "/";
-  const underlineAbout = location.pathname === "/about";
+  const underlineHome = location.pathname === "/" ? "true" : null;
+  const underlineAbout = location.pathname === "/about" ? "true" : null;
   return (
     <HeaderContainer>
       <LogoHeader>

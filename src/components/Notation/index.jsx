@@ -24,9 +24,9 @@ function Notation({ rating }) {
     <StarContainer>
       {tabRating.map((value) => {
         if (value <= ratingNumber) {
-          return <Star style={{ fill: "#ff6060" }} />;
+          return <Star style={{ fill: "#ff6060" }} key={value} />;
         } else {
-          return <Star style={{ fill: "#E3E3E3" }} />;
+          return <Star style={{ fill: "#E3E3E3" }} key={value} />;
         }
       })}
     </StarContainer>
