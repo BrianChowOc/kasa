@@ -1,4 +1,4 @@
-import { useParams, useNavigate } from "react-router-dom";
+import { useParams } from "react-router-dom";
 import styled from "styled-components";
 import HostImg from "../../components/HostImg";
 import Notation from "../../components/Notation";
@@ -97,26 +97,26 @@ const DescriptionCollapseStyle = styled.div`
 
 function Housing() {
   const { id } = useParams();
-  const logement = logementList.filter((appart) => {
+  let logement = logementList.filter((appart) => {
     return appart.id === id;
   });
 
   if (logement.length === 0) {
     return <Error />;
   }
-
-  const name = logement[0].host.name.split(" ");
+  logement = logement[0];
+  const name = logement.host.name.split(" ");
   const firstName = name[0];
   const lastName = name[1];
   return (
     <HousingContainer>
-      <Slideshow pictures={logement[0].pictures} />
+      <Slideshow pictures={logement.pictures} />
       <MainInfoContainer>
         <div>
-          <TitleStyle>{logement[0].title}</TitleStyle>
-          <LocationStyle>{logement[0].location}</LocationStyle>
+          <TitleStyle>{logement.title}</TitleStyle>
+          <LocationStyle>{logement.location}</LocationStyle>
           <div style={{ display: "flex", marginTop: "10px" }}>
-            {logement[0].tags.map((tag) => {
+            {logement.tags.map((tag) => {
               return (
                 <div style={{ marginRight: "10px" }} key={tag}>
                   <Tag text={tag} />
@@ -137,10 +137,10 @@ function Housing() {
               <div>{firstName}</div>
               <div>{lastName}</div>
             </NameStyle>
-            <HostImg img={logement[0].host.picture} />
+            <HostImg img={logement.host.picture} />
           </div>
           <div style={{ heigth: "10px" }}>
-            <Notation rating={logement[0].rating} />
+            <Notation rating={logement.rating} />
           </div>
         </NameStarContainer>
       </MainInfoContainer>
@@ -148,10 +148,10 @@ function Housing() {
         <DescriptionCollapseStyle
           style={{ marginRight: "76px", width: "100%" }}
         >
-          <Collapse text="Description" description={logement[0].description} />
+          <Collapse text="Description" description={logement.description} />
         </DescriptionCollapseStyle>
         <div style={{ width: "100%" }}>
-          <Collapse text="Équipements" description={logement[0].equipments} />
+          <Collapse text="Équipements" description={logement.equipments} />
         </div>
       </DescriptionContainer>
     </HousingContainer>
