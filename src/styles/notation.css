@@ -1,0 +1,16 @@
+.StarContainer {
+  width: 190px;
+  display: flex;
+  justify-content: space-between;
+}
+@media screen and (max-width: 280px) {
+  .StarContainer {
+    width: 100px;
+  }
+}
+@media screen and (max-width: 915px) {
+  .StarStyle {
+    width: 15px;
+    height: 15px;
+  }
+}

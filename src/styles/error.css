@@ -1,0 +1,53 @@
+#ErrorContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  color: #ff6060;
+  height: 558px;
+}
+@media screen and (max-width: 915px) {
+  #ErrorContainer {
+    font-size: 12px;
+  }
+}
+
+#ErrorHeader {
+  font-weight: 700;
+  font-size: 288px;
+}
+@media screen and (max-width: 915px) {
+  #ErrorHeader {
+    font-size: 96px;
+  }
+}
+
+#ErrorText {
+  font-weight: 500;
+  font-size: 36px;
+}
+@media screen and (max-width: 915px) {
+  #ErrorText {
+    font-size: 18px;
+  }
+}
+
+#HeaderTextContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  margin-left: 20px;
+  margin-right: 20px;
+}
+
+#StyledLink {
+  color: #ff6060;
+  font-size: 18px;
+  font-weight: 500;
+}
+@media screen and (max-width: 915px) {
+  #StyledLink {
+    font-size: 14px;
+  }
+}

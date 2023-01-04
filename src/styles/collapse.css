@@ -1,0 +1,77 @@
+.CollapseContainer {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+.HeaderCollapse {
+  height: 52px;
+  background-color: #ff6060;
+  border-radius: 10px;
+  color: white;
+  display: flex;
+  align-items: center;
+  font-weight: 500;
+  font-size: 24px;
+  justify-content: space-between;
+}
+@media screen and (max-width: 915px) {
+  .HeaderCollapse {
+    height: 30px;
+    font-size: 13px;
+  }
+}
+
+.TextCollapse {
+  padding-left: 18px;
+}
+
+.ArrowCollapse {
+  padding-right: 16px;
+}
+
+.BodyCollapse {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  color: #ff6060;
+  background-color: #f6f6f6;
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+  padding-left: 18px;
+  padding-right: 27px;
+  padding-top: 27px;
+  padding-bottom: 19px;
+}
+@media screen and (max-width: 915px) {
+  .BodyCollapse {
+    font-size: 12px;
+  }
+  .Arrow {
+    width: 10px;
+    height: 15px;
+  }
+}
+
+.BodyCollapseObject {
+  display: flex;
+  color: #ff6060;
+  background-color: #f6f6f6;
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+  padding-left: 18px;
+  padding-right: 27px;
+  padding-top: 27px;
+  padding-bottom: 19px;
+}
+
+.UlStyle {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+@media screen and (max-width: 915px) {
+  .UlStyle {
+    font-size: 12px;
+  }
+}

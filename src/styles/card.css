@@ -1,0 +1,37 @@
+.CardContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  width: 340px;
+  height: 340px;
+  border-radius: 10px;
+  font-weight: 500;
+  font-size: 18px;
+  padding-bottom: 20px;
+  padding-left: 20px;
+  color: white;
+  background-position: center;
+  background-size: cover;
+  margin: 25px;
+}
+@media screen and (max-width: 915px) {
+  .CardContainer {
+    width: 335px;
+    height: 255px;
+  }
+}
+@media screen and (max-width: 410px) {
+  .CardContainer {
+    width: 300px;
+    height: 200px;
+    margin: 0px;
+  }
+}
+@media screen and (max-width: 280px) {
+  .CardContainer {
+    width: 220px;
+    height: 150px;
+    margin: 0px;
+    font-size: 15px;
+  }
+}

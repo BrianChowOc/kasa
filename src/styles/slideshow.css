@@ -1,0 +1,35 @@
+#SlideshowContainer {
+  width: 100%;
+  height: 415px;
+  position: relative;
+  border-radius: 25px;
+}
+.ArrowStyle {
+  position: "absolute";
+  top: "40%";
+  right: "23px";
+  cursor: "pointer";
+}
+@media screen and (max-width: 915px) {
+  #SlideshowContainer {
+    height: 255px;
+  }
+}
+@media screen and (max-width: 915px) {
+  .ArrowStyle {
+    height: 20px;
+    width: 11.6px;
+  }
+}
+
+#CountStyle {
+  position: absolute;
+  color: white;
+  bottom: 24px;
+  left: 50%;
+}
+@media screen and (max-width: 915px) {
+  #CountStyle {
+    display: none;
+  }
+}

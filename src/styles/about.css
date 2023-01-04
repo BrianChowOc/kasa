@@ -1,0 +1,26 @@
+#AboutContainer {
+  margin: 0px 100px 0px 100px;
+}
+
+@media screen and (max-width: 915px) {
+  #AboutContainer {
+    margin-right: 21px;
+    margin-left: 21px;
+  }
+}
+
+#CollapseContainer {
+  margin-top: 31px;
+  margin-left: 100px;
+  margin-right: 100px;
+}
+@media screen and (max-width: 915px) {
+  #CollapseContainer {
+    margin-right: 0px;
+    margin-left: 0px;
+  }
+}
+
+.CollapseStyle {
+  margin-bottom: 31px;
+}

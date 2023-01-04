@@ -1,37 +1,7 @@
 import { useState } from "react";
-import styled from "styled-components";
 import { ReactComponent as LeftArrow } from "../../images/LeftArrow.svg";
 import { ReactComponent as RightArrow } from "../../images/RightArrow.svg";
-
-const SlideshowContainer = styled.div`
-  width: 100%;
-  height: 415px;
-  position: relative;
-  border-radius: 25px;
-  svg {
-    position: "absolute";
-    top: "40%";
-    right: "23px";
-    cursor: "pointer";
-  }
-  @media screen and (max-width: 915px) {
-    height: 255px;
-    svg {
-      height: 20px;
-      width: 11.6px;
-    }
-  }
-`;
-
-const CountStyle = styled.div`
-  position: absolute;
-  color: white;
-  bottom: 24px;
-  left: 50%;
-  @media screen and (max-width: 915px) {
-    display: none;
-  }
-`;
+import "../../styles/slideshow.css";
 
 function Slideshow({ pictures }) {
   const [currentIndex, setCurrentIndex] = useState(0);
@@ -70,21 +40,29 @@ function Slideshow({ pictures }) {
   };
 
   return (
-    <SlideshowContainer>
+    <div id="SlideshowContainer">
       <div style={slideStyle}>
         {pictures.length > 1 && (
-          <LeftArrow style={leftArrowStyle} onClick={goToPrevious} />
+          <LeftArrow
+            style={leftArrowStyle}
+            onClick={goToPrevious}
+            class="ArrowStyle"
+          />
         )}
         {pictures.length > 1 && (
-          <RightArrow style={rightArrowStyle} onClick={goToNext} />
+          <RightArrow
+            style={rightArrowStyle}
+            onClick={goToNext}
+            class="ArrowStyle"
+          />
         )}
         {pictures.length > 1 && (
-          <CountStyle>
+          <div id="CountStyle">
             {currentIndex + 1}/{pictures.length}
-          </CountStyle>
+          </div>
         )}
       </div>
-    </SlideshowContainer>
+    </div>
   );
 }
 

@@ -1,0 +1,105 @@
+#HousingContainer {
+  display: flex;
+  flex-direction: column;
+  margin-right: 100px;
+  margin-left: 100px;
+}
+@media screen and (max-width: 915px) {
+  #HousingContainer {
+    margin-right: 20px;
+    margin-left: 20px;
+  }
+}
+
+#MainInfoContainer {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 30px;
+}
+@media screen and (max-width: 915px) {
+  #MainInfoContainer {
+    margin-top: 15px;
+    flex-direction: column;
+  }
+}
+
+#TitleStyle {
+  font-size: 36px;
+  font-weight: 500;
+  color: #ff6060;
+}
+@media screen and (max-width: 915px) {
+  #TitleStyle {
+    font-size: 18px;
+  }
+}
+
+@media screen and (max-width: 280px) {
+  #TitleStyle {
+    font-size: 15px;
+  }
+}
+
+#LocationStyle {
+  font-size: 18px;
+  font-weight: 500;
+  color: #ff6060;
+  margin-top: 5px;
+  margin-bottom: 5px;
+}
+@media screen and (max-width: 915px) {
+  #LocationStyle {
+    font-size: 14px;
+  }
+}
+@media screen and (max-width: 280px) {
+  #LocationStyle {
+    font-size: 11px;
+  }
+}
+
+@media screen and (max-width: 915px) {
+  #NameStarContainer {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 10px;
+  }
+}
+
+#NameStyle {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  font-size: 18px;
+  font-weight: 500;
+  color: #ff6060;
+  margin-right: 10px;
+}
+@media screen and (max-width: 915px) {
+  #NameStyle {
+    font-size: 12px;
+  }
+}
+
+#DescriptionContainer {
+  display: flex;
+  width: 100%;
+  margin-top: 24px;
+}
+@media screen and (max-width: 915px) {
+  #DescriptionContainer {
+    flex-direction: column;
+  }
+}
+
+#DescriptionCollapseStyle {
+  margin-right: 76px;
+  width: 100%;
+}
+@media screen and (max-width: 915px) {
+  #DescriptionCollapseStyle {
+    margin-bottom: 20px;
+  }
+}
