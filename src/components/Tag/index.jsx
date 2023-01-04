@@ -1,7 +1,7 @@
 import "../../styles/tag.css";
 
 function Tag({ text }) {
-  return <div class="TagContainer">{text}</div>;
+  return <div className="TagContainer">{text}</div>;
 }
 
 export default Tag;

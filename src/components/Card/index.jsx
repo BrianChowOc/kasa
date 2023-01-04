@@ -2,7 +2,7 @@ import "../../styles/card.css";
 
 function Card({ title, cover }) {
   return (
-    <div class="CardContainer" style={{ backgroundImage: `url(${cover})` }}>
+    <div className="CardContainer" style={{ backgroundImage: `url(${cover})` }}>
       {title}
     </div>
   );

@@ -19,7 +19,7 @@ function Header() {
       </div>
       <nav id="NavContainer">
         <Link
-          class="StyledLink"
+          className="StyledLink"
           to="/"
           style={{
             textDecoration: location.pathname === "/" ? "underline" : "none",
@@ -28,7 +28,7 @@ function Header() {
           Accueil
         </Link>
         <Link
-          class="StyledLink"
+          className="StyledLink"
           to="/about"
           style={{
             textDecoration:

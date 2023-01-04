@@ -46,14 +46,14 @@ function Slideshow({ pictures }) {
           <LeftArrow
             style={leftArrowStyle}
             onClick={goToPrevious}
-            class="ArrowStyle"
+            className="ArrowStyle"
           />
         )}
         {pictures.length > 1 && (
           <RightArrow
             style={rightArrowStyle}
             onClick={goToNext}
-            class="ArrowStyle"
+            className="ArrowStyle"
           />
         )}
         {pictures.length > 1 && (
