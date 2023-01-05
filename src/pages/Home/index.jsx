@@ -14,7 +14,11 @@ function Home() {
       />
       <div id="CardContainer">
         {logementList.map((logement) => (
-          <Link id="CardStyle" key={logement.id} to={`/housing/${logement.id}`}>
+          <Link
+            className="CardStyle"
+            key={logement.id}
+            to={`/housing/${logement.id}`}
+          >
             <Card title={logement.title} cover={logement.cover} />
           </Link>
         ))}
