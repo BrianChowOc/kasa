@@ -32,7 +32,6 @@
 
 .BodyCollapse {
   display: flex;
-  justify-content: center;
   flex-wrap: wrap;
   color: #ff6060;
   background-color: #f6f6f6;
