@@ -62,10 +62,10 @@ function Housing() {
           id="DescriptionCollapseStyle"
           style={{ marginRight: "76px", width: "100%" }}
         >
-          <Collapse text="Description" description={logement.description} />
+          <Collapse title="Description" description={logement.description} />
         </div>
         <div style={{ width: "100%" }}>
-          <Collapse text="Équipements" description={logement.equipments} />
+          <Collapse title="Équipements" description={logement.equipments} />
         </div>
       </div>
     </div>

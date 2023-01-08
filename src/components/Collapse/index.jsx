@@ -3,7 +3,7 @@ import { ReactComponent as ArrowTop } from "../../images/ArrowBottom.svg";
 import { ReactComponent as ArrowBottom } from "../../images/ArrowTop.svg";
 import "../../styles/collapse.css";
 
-function Collapse({ text, description }) {
+function Collapse({ title, description }) {
   const [isHidden, setIsHidden] = useState(true);
   return (
     <div className="CollapseContainer">
@@ -13,7 +13,7 @@ function Collapse({ text, description }) {
           setIsHidden(!isHidden);
         }}
       >
-        <span className="TextCollapse">{text}</span>
+        <span className="TextCollapse">{title}</span>
         {!isHidden ? (
           <span className="ArrowCollapse">
             <ArrowBottom className="Arrow" />
