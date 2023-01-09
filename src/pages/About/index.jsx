@@ -2,8 +2,12 @@ import Collapse from "../../components/Collapse";
 import Banner from "../../components/Banner";
 import "../../styles/about.css";
 import imageHeaderAbout from "../../images/imageHeaderAbout.png";
-
+import { useEffect } from "react";
 function About() {
+  useEffect(() => {
+    document.title = "A propos";
+  }, []);
+
   return (
     <div id="AboutContainer">
       <Banner imgBanner={imageHeaderAbout} />

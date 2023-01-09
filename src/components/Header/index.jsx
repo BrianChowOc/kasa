@@ -11,12 +11,14 @@ function Header() {
 
   return (
     <div id="HeaderContainer">
-      <div id="LogoHeader">
-        <KLogo fill="#ff6060" />
-        <HouseLogo fill="#ff6060" />
-        <SLogo fill="#ff6060" />
-        <ALogo fill="#ff6060" />
-      </div>
+      <Link to="/">
+        <div id="LogoHeader">
+          <KLogo fill="#ff6060" />
+          <HouseLogo fill="#ff6060" />
+          <SLogo fill="#ff6060" />
+          <ALogo fill="#ff6060" />
+        </div>
+      </Link>
       <nav id="NavContainer">
         <Link
           className="StyledLink"

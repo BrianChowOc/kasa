@@ -7,6 +7,7 @@ import logementList from "../../datas/logementList";
 import Collapse from "../../components/Collapse";
 import Error from "../Error";
 import "../../styles/housing.css";
+import { useEffect } from "react";
 
 function Housing() {
   const { id } = useParams();
@@ -14,9 +15,14 @@ function Housing() {
     return appart.id === id;
   });
 
+  useEffect(() => {
+    document.title = `${logement.title}`;
+  }, [logement]);
+
   if (logement.length === 0) {
     return <Error />;
   }
+
   logement = logement[0];
   const name = logement.host.name.split(" ");
   const firstName = name[0];

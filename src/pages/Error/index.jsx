@@ -1,7 +1,10 @@
 import "../../styles/error.css";
 import { Link } from "react-router-dom";
-
+import { useEffect } from "react";
 function Error() {
+  useEffect(() => {
+    document.title = "404";
+  }, []);
   return (
     <div id="ErrorContainer">
       <div id="HeaderTextContainer">

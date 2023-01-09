@@ -4,8 +4,13 @@ import imageHeaderHome from "../../images/imageHeaderHome.png";
 import logementList from "../../datas/logementList.js";
 import { Link } from "react-router-dom";
 import "../../styles/home.css";
+import { useEffect } from "react";
 
 function Home() {
+  useEffect(() => {
+    document.title = "Accueil";
+  }, []);
+
   return (
     <div id="HomeContainer">
       <Banner
